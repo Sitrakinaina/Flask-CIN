@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
+{% for user in users %}
+<a href="#">
+    <h2>{{ user['nom'] }}</h2>
+    <h3>{{ user['prenom']}}</h3>
+</a>
+<span class="badge badge-primary">{{ user['created'] }}</span>
+<hr>
+{% endfor %}{% endblock %}
